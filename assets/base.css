@@ -3598,8 +3598,3 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-
-
-.progress-bar {
-display: none;
-}
