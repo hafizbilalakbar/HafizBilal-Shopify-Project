@@ -1,3 +1,53 @@
+{% assign full_width = '100vw' %}
+{% assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' %}
+
+<div id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}">
+  
+  {%- if section.settings.image != blank -%}
+    <div class="banner__media">
+      {{ section.settings.image | image_url: width: 3840 | image_tag: width: '100%', height: 'auto', sizes: full_width, widths: widths }}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.image_2 != blank -%}
+    <div class="banner__media">
+      {{ section.settings.image_2 | image_url: width: 3840 | image_tag: width: '100%', height: 'auto', sizes: full_width, widths: widths }}
+    </div>
+  {%- endif -%}
+
+  <div class="banner__content" style="text-align: {{ section.settings.desktop_content_position }}">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'heading' %}
+          <h2 class="banner__heading">{{ block.settings.heading }}</h2>
+        {% when 'text' %}
+          <p class="banner__text">{{ block.settings.text }}</p>
+        {% when 'buttons' %}
+          {% if block.settings.button_label_1 != blank %}
+            <a href="{{ block.settings.button_link_1 }}" class="button">{{ block.settings.button_label_1 }}</a>
+          {% endif %}
+          {% if block.settings.button_label_2 != blank %}
+            <a href="{{ block.settings.button_link_2 }}" class="button">{{ block.settings.button_label_2 }}</a>
+          {% endif %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% schema %}
   {
     "name": "Section name",
