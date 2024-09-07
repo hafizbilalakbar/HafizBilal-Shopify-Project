@@ -78,11 +78,30 @@
     },
     "custom_banner_4VtrDc": {
       "type": "custom-banner",
+      "blocks": {
+        "heading_FKGA8M": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        },
+        "text_FLPgdA": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FKGA8M",
+        "text_FLPgdA"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Group_1000008197.png",
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "top_left",
+        "desktop_content_position": "bottom_left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
