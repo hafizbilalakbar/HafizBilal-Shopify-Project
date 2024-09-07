@@ -79,8 +79,9 @@
     "custom_banner_4VtrDc": {
       "type": "custom-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Group_1000008197.png",
         "image_overlay_opacity": 50,
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_content_position": "top_left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
