@@ -49,9 +49,11 @@
         "image_height": "adapt",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
+        "banner_desktop_max_width": "10rem",
         "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
+        "banner_tablet_max_width": "45rem",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true
