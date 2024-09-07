@@ -1,27 +1,3 @@
-/* In assets/custom.css.liquid */
-
-/* Desktop view */
-@media screen and (min-width: 750px) {
-  .custom-banner-desktop-transparent .custom-banner__box {
-  max-width: {{ section.settings.banner_desktop_max_width }}rem;
-}
-}
-
-/* Tablet view */
-@media screen and (max-width: 749px) and (min-width: 600px) {
-.custom-banner-tablet-transparent .custom-banner__box {
-  max-width: {{ section.settings.banner_tablet_max_width }}rem;
-}
-}
-
-/* Mobile view */
-.custom-banner-mobile-transparent .custom-banner__box {
-  max-width: 100%; /* Full width for mobile */
-}
-
-
-
-
 .custom-banner {
   display: flex;
   position: relative;
