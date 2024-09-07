@@ -360,7 +360,7 @@
 
   .banner--desktop-transparent .banner__box {
     padding: 4rem 0;
-    /* background: transparent; */
+    background: transparent;
     max-width: 89rem;
     border: none;
     border-radius: 0;
