@@ -186,8 +186,7 @@
       "label": "Image overlay opacity",
       "default": 50,
       "min": 0,
-      "max": 100,
-      "step": 1
+      "max": 100
     },
     {
       "type": "select",
@@ -199,7 +198,8 @@
         { "value": "medium", "label": "Medium" },
         { "value": "large", "label": "Large" }
       ],
-      "default": "medium"
+      "default": "medium",
+      "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
     },
     {
       "type": "select",
@@ -221,6 +221,36 @@
       "type": "checkbox",
       "id": "show_text_box",
       "label": "Show container on desktop"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "label": "Desktop content alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "label": "Mobile content alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_images_on_mobile",
+      "label": "Stack images on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_below",
+      "label": "Show container on mobile"
     }
   ],
   "blocks": [
@@ -244,7 +274,17 @@
           "type": "textarea",
           "id": "text",
           "label": "Description",
-          "default": "Provide details about the banner image(s) or content."
+          "default": "Give customers details about the banner image(s) or content on the template."
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text style",
+          "options": [
+            { "value": "body", "label": "Body" },
+            { "value": "subtitle", "label": "Subtitle" },
+            { "value": "uppercase", "label": "Uppercase" }
+          ]
         }
       ]
     },
@@ -256,7 +296,8 @@
           "type": "text",
           "id": "button_label_1",
           "label": "First button label",
-          "default": "Button label"
+          "default": "Button label",
+          "info": "Leave the label blank to hide the button."
         },
         {
           "type": "url",
@@ -264,15 +305,26 @@
           "label": "First button link"
         },
         {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "label": "Use outline button style"
+        },
+        {
           "type": "text",
           "id": "button_label_2",
           "label": "Second button label",
-          "default": "Button label"
+          "default": "Button label",
+          "info": "Leave the label blank to hide the button."
         },
         {
           "type": "url",
           "id": "button_link_2",
           "label": "Second button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "label": "Use outline button style"
         }
       ]
     }
