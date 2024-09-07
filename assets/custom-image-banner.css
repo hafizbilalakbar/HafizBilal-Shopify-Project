@@ -1,30 +1,16 @@
-/* In assets/custom.css.liquid */
-
-:root {
-  --custom-banner-desktop-max-width: {{ settings.banner_desktop_max_width }};
-  --custom-banner-tablet-max-width: {{ settings.banner_tablet_max_width }};
+/* Set custom max-widths using Liquid variables */
+.custom-banner-desktop-transparent .custom-banner__box {
+  max-width: {{ settings.banner_desktop_max_width }}rem;
 }
 
-/* Desktop view */
-@media screen and (min-width: 750px) {
-  .custom-banner-desktop-transparent .custom-banner__box {
-    max-width: var(--custom-banner-desktop-max-width);
-  }
+.custom-banner-tablet-transparent .custom-banner__box {
+  max-width: {{ settings.banner_tablet_max_width }}rem;
 }
 
-/* Tablet view */
-@media screen and (max-width: 749px) and (min-width: 600px) {
-  .custom-banner-tablet-transparent .custom-banner__box {
-    max-width: var(--custom-banner-tablet-max-width);
-  }
+.custom-banner-mobile-transparent .custom-banner__box {
+  max-width: 100%; /* Full width for mobile */
 }
 
-/* Mobile view */
-@media screen and (max-width: 599px) {
-  .custom-banner-mobile-transparent .custom-banner__box {
-    max-width: 100%; /* Full width for mobile */
-  }
-}
 
 
 
