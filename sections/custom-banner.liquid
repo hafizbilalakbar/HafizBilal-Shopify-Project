@@ -26,13 +26,13 @@
       "type": "image_picker",
       "id": "image",
       "label": "First image",
-      "info": "Upload the primary image for the banner. This image will be displayed prominently."
+      "info": "Upload the primary image for the banner."
     },
     {
       "type": "image_picker",
       "id": "image_2",
       "label": "Second image",
-      "info": "Upload a secondary image if needed. This image will be used as a background or additional visual element."
+      "info": "Upload a secondary image if needed."
     },
     {
       "type": "range",
@@ -55,7 +55,7 @@
         { "value": "large", "label": "Large" }
       ],
       "default": "medium",
-      "info": "Select the height of the banner. 'Adapt to first image' will adjust the height based on the first image."
+      "info": "Select the height of the banner."
     },
     {
       "type": "select",
@@ -81,26 +81,6 @@
       "label": "Show container on desktop",
       "default": true,
       "info": "Check this box to show the text container on desktop views."
-    },
-    {
-      "type": "checkbox",
-      "id": "stack_images_on_mobile",
-      "label": "Stack images on mobile",
-      "default": false,
-      "info": "Check this box to stack images vertically on mobile devices."
-    },
-    {
-      "type": "select",
-      "id": "image_behavior",
-      "label": "Image behavior",
-      "options": [
-        { "value": "none", "label": "None" },
-        { "value": "ambient", "label": "Ambient" },
-        { "value": "fixed", "label": "Fixed" },
-        { "value": "zoom-in", "label": "Zoom In" }
-      ],
-      "default": "none",
-      "info": "Select how the images should behave. Options include fixed positioning or zoom effects."
     }
   ],
   "blocks": [
@@ -165,15 +145,14 @@
   ],
   "presets": [
     {
-      "name": "Custom Banner Image",
+      "name": "Custom banner Image",
       "category": "Image Banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/default_image.jpg",
-        "image_2": "shopify:\/\/shop_images\/default_image_2.jpg"
+        "image": "shopify://shop_images/default_banner_image.jpg",
+        "image_2": "shopify://shop_images/default_banner_image_2.jpg"
       }
     }
   ]
 }
-
 
 {% endschema %}
