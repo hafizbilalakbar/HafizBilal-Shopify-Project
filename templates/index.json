@@ -53,7 +53,7 @@
         "color_scheme": "",
         "image_behavior": "none",
         "banner_desktop_max_width": 36,
-        "banner_tablet_max_width": 46,
+        "banner_tablet_max_width": 50,
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true
