@@ -82,7 +82,8 @@
         "heading_FKGA8M": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner"
+            "heading": "Image banner",
+            "heading_size": "h1"
           }
         },
         "text_FLPgdA": {
@@ -101,12 +102,14 @@
         "image": "shopify:\/\/shop_images\/Group_1000008197.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "bottom_left",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     }
   },
