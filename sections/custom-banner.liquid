@@ -179,18 +179,20 @@
 
 
 {% schema %}
- {
+{
   "name": "Image Banner",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "First image"
+      "label": "First image",
+      "info": "Upload the primary image for the banner. This image will be displayed prominently."
     },
     {
       "type": "image_picker",
       "id": "image_2",
-      "label": "Second image"
+      "label": "Second image",
+      "info": "Upload a secondary image if needed. This image will be used as a background or additional visual element."
     },
     {
       "type": "range",
@@ -199,7 +201,8 @@
       "default": 50,
       "min": 0,
       "max": 100,
-      "step": 1
+      "step": 1,
+      "info": "Adjust the opacity of the overlay on the banner images."
     },
     {
       "type": "select",
@@ -211,7 +214,8 @@
         { "value": "medium", "label": "Medium" },
         { "value": "large", "label": "Large" }
       ],
-      "default": "medium"
+      "default": "medium",
+      "info": "Select the height of the banner. 'Adapt to first image' will adjust the height based on the first image."
     },
     {
       "type": "select",
@@ -228,19 +232,22 @@
         { "value": "bottom_center", "label": "Bottom Center" },
         { "value": "bottom_right", "label": "Bottom Right" }
       ],
-      "default": "middle_center"
+      "default": "middle_center",
+      "info": "Choose the position of the content over the banner image."
     },
     {
       "type": "checkbox",
       "id": "show_text_box",
       "label": "Show container on desktop",
-      "default": true
+      "default": true,
+      "info": "Check this box to show the text container on desktop views."
     },
     {
       "type": "checkbox",
       "id": "stack_images_on_mobile",
       "label": "Stack images on mobile",
-      "default": false
+      "default": false,
+      "info": "Check this box to stack images vertically on mobile devices."
     },
     {
       "type": "select",
@@ -252,7 +259,8 @@
         { "value": "fixed", "label": "Fixed" },
         { "value": "zoom-in", "label": "Zoom In" }
       ],
-      "default": "none"
+      "default": "none",
+      "info": "Select how the images should behave. Options include fixed positioning or zoom effects."
     }
   ],
   "blocks": [
@@ -264,7 +272,8 @@
           "type": "text",
           "id": "heading",
           "label": "Heading",
-          "default": "Image Banner"
+          "default": "Image Banner",
+          "info": "Enter the heading text for the banner."
         }
       ]
     },
@@ -276,7 +285,8 @@
           "type": "textarea",
           "id": "text",
           "label": "Description",
-          "default": "Provide details about the banner image(s) or content."
+          "default": "Provide details about the banner image(s) or content.",
+          "info": "Enter a description or details about the banner."
         }
       ]
     },
@@ -288,32 +298,42 @@
           "type": "text",
           "id": "button_label_1",
           "label": "First button label",
-          "default": "Button label"
+          "default": "Button label",
+          "info": "Enter the label for the first button."
         },
         {
           "type": "url",
           "id": "button_link_1",
-          "label": "First button link"
+          "label": "First button link",
+          "info": "Enter the URL for the first button link."
         },
         {
           "type": "text",
           "id": "button_label_2",
           "label": "Second button label",
-          "default": "Button label"
+          "default": "Button label",
+          "info": "Enter the label for the second button."
         },
         {
           "type": "url",
           "id": "button_link_2",
-          "label": "Second button link"
+          "label": "Second button link",
+          "info": "Enter the URL for the second button link."
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Custom Banner Image"
+      "name": "Default",
+      "category": "Image Banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/default_image.jpg",
+        "image_2": "shopify:\/\/shop_images\/default_image_2.jpg"
+      }
     }
   ]
 }
+
 
 {% endschema %}
