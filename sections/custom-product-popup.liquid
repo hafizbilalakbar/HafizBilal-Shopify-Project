@@ -1,6 +1,26 @@
  {{ 'custom-popup.css' | asset_url | stylesheet_tag }}
 
 
+<div id="product-popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <div class="popup-image">
+      <img id="popup-product-image" src="" alt="Product Image">
+    </div>
+    <div class="popup-details">
+      <h3 id="popup-product-title">Product Title</h3>
+      <p id="popup-product-price">$0.00</p>
+      <p id="popup-product-description">Product description goes here...</p>
+
+      <!-- Variant selection -->
+      <label for="popup-variant-select">Choose a variant:</label>
+      <select id="popup-variant-select"></select>
+
+      <!-- Add to Cart button -->
+      <button id="popup-add-to-cart" class="button button--primary">Add to Cart</button>
+    </div>
+  </div>
+</div>
 
 
 
