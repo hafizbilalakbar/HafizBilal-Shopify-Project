@@ -1,4 +1,4 @@
-{% comment %} {{ 'custom-image-banner.css' | asset_url | stylesheet_tag } {% endcomment %}
+{{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
