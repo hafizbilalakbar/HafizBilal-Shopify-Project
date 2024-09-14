@@ -1,8 +1,9 @@
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
-  {%- style -%}
 
+<style>
+    
 /* Custom hover button styling */
 .custom-hover-button {
   position: relative;
@@ -90,7 +91,7 @@
 }
 
     
-  {%- endstyle -%}
+  </style>
 {%- endif -%}
 
 {%- style -%}
