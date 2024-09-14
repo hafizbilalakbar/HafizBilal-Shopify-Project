@@ -10,20 +10,27 @@
   background-color: black;
   color: white;
   padding: 12px 24px;
-  border: 2px solid black;
+  border: none; /* Border removed */
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  overflow: hidden; /* Ensures the background transition stays within the button bounds */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Keeps the hover effect inside the button */
+  outline: none; /* Removes default outline */
+}
+
+/* Add a subtle shadow on hover */
+.custom-hover-button:hover {
+  color: black; /* Text color turns black on hover */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .custom-hover-button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%; /* Starts the background from the left off-screen */
+  left: -100%; /* Starts the background off-screen */
   width: 100%;
   height: 100%;
   background-color: yellow;
@@ -32,7 +39,7 @@
 }
 
 .custom-hover-button:hover::before {
-  left: 0; /* On hover, the yellow background slides in from left to right */
+  left: 0; /* On hover, the yellow background slides in */
 }
 
 .custom-hover-button span,
@@ -42,23 +49,24 @@
   transition: color 0.3s ease;
 }
 
-.custom-hover-button:hover {
-  color: black; /* Text color turns black on hover */
-}
-
 .custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease; /* Smooth transition for the arrow color */
+  transition: fill 0.3s ease; /* Smooth transition for arrow color */
 }
 
 .custom-hover-button:hover .arrow svg path {
   fill: black; /* Arrow color changes to black on hover */
 }
 
-/* Prevent the button from stretching */
-.custom-hover-button:hover {
-  padding: 12px 24px; /* Ensures the padding and size don't change on hover */
-  width: auto; /* Keeps the width constant */
+/* Adds keyboard focus state */
+.custom-hover-button:focus {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect for focus */
 }
+
+/* Adds keyboard "active" state */
+.custom-hover-button:active {
+  transform: translateY(2px); /* Slight button press effect */
+}
+
 
 
     
