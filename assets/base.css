@@ -3600,32 +3600,5 @@ details-disclosure > details {
 }
 
 
-.custom-banner__buttons .button--primary {
-    background-color: #FF0000; /* Example color */
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.custom-banner__buttons .button--primary:hover {
-    background-color: #000000; /* On hover, button changes color */
-}
-
-.custom-banner__buttons .button--primary:after {
-    content: '→'; /* Arrow */
-    margin-left: 10px;
-    transition: margin-left 0.3s ease;
-}
-
-.custom-banner__buttons .button--primary:hover:after {
-    margin-left: 15px; /* Arrow moves slightly when hovered */
-}
 
 
