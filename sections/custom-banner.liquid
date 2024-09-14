@@ -30,15 +30,15 @@
 }
 
 .custom-hover-button::before {
-  content: "";
+  content: "" !important;
   position: absolute;
   top: 0;
   left: -100%; /* Starts the background off-screen */
   width: 100%;
   height: 100%;
-  background-color: #FFF544;
+  background-color: #FFF544 !important;
   z-index: -1; /* Ensures background stays behind the text */
-  transition: left 0.4s ease; /* Smooth background slide from left to right */
+  transition: left 0.4s ease !important; /* Smooth background slide from left to right */
 }
 
 .custom-hover-button:hover::before {
