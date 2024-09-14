@@ -201,7 +201,8 @@
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
-     <div class="custom-banner__buttons">
+
+   <div class="custom-banner__buttons">
   {%- if block.settings.button_label_1 != blank -%}
     <a
       {% if block.settings.button_link_1 == blank %}
@@ -219,7 +220,6 @@
       </span>
     </a>
   {%- endif -%}
-
   {%- if block.settings.button_label_2 != blank -%}
     <a
       {% if block.settings.button_link_2 == blank %}
@@ -233,6 +233,7 @@
     </a>
   {%- endif -%}
 </div>
+
 
         {%- endcase -%}
       {%- endfor -%}
