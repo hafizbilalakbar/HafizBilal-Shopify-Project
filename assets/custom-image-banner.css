@@ -44,7 +44,7 @@
 .custom-hover-button span,
 .custom-hover-button .arrow {
   position: relative;
-  /* z-index: 1;  */
+  z-index: 1; 
   transition: color 0.3s ease;
 }
 
