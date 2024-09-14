@@ -135,7 +135,7 @@
             </div>
           {%- when 'buttons' -%}
 
-   <div class="custom-banner__buttons">
+  <div class="custom-banner__buttons">
   {%- if block.settings.button_label_1 != blank -%}
     <a
       {% if block.settings.button_link_1 == blank %}
@@ -145,7 +145,8 @@
       {% endif %}
       class="button {% if block.settings.button_style_secondary_1 %}button--secondary{% else %}button--primary custom-hover-button{% endif %}"
     >
-      {{ block.settings.button_label_1 | escape }}
+      <span class="button-bg"></span> <!-- Background animation span -->
+      <span class="button-text">{{ block.settings.button_label_1 | escape }}</span>
       <span class="arrow">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="13" viewBox="0 0 28 13" fill="none">
           <path d="M1.11108 5.74396L0.361084 5.74396L0.361084 7.24396L1.11108 7.24396L1.11108 5.74396ZM27.1487 7.02429C27.4416 6.7314 27.4416 6.25652 27.1487 5.96363L22.3757 1.19066C22.0828 0.897765 21.6079 0.897765 21.315 1.19066C21.0221 1.48355 21.0221 1.95843 21.315 2.25132L25.5577 6.49396L21.315 10.7366C21.0221 11.0295 21.0221 11.5044 21.315 11.7973C21.6079 12.0902 22.0828 12.0902 22.3757 11.7973L27.1487 7.02429ZM1.11108 7.24396L26.6183 7.24396L26.6183 5.74396L1.11108 5.74396L1.11108 7.24396Z" fill="white"/>
@@ -153,6 +154,7 @@
       </span>
     </a>
   {%- endif -%}
+
   {%- if block.settings.button_label_2 != blank -%}
     <a
       {% if block.settings.button_link_2 == blank %}
@@ -166,6 +168,7 @@
     </a>
   {%- endif -%}
 </div>
+
 
 
         {%- endcase -%}
