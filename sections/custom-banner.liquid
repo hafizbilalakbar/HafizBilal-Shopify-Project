@@ -13,7 +13,7 @@
   background-color: black;
   color: white;
   padding: 12px 24px;
-  border: none; /* Border removed */
+  border: none !important; /* Border removed */
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -37,7 +37,7 @@
   width: 100%;
   height: 100%;
   background-color: #FFF544;
-  z-index: 0; /* Stays behind the text, no need for negative z-index */
+  z-index: -1; /* Ensures background stays behind the text */
   transition: left 0.4s ease; /* Smooth background slide from left to right */
 }
 
@@ -69,7 +69,6 @@
 .custom-hover-button:active {
   transform: translateY(2px) !important; /* Slight button press effect */
 }
-
     
 /* Desktop view */
 @media screen and (min-width: 750px) {
