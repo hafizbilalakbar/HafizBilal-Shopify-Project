@@ -56,11 +56,6 @@
   fill: black; /* Arrow color changes to black on hover */
 }
 
-/* Adds keyboard focus state */
-.custom-hover-button:focus {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect for focus */
-}
-
 /* Adds keyboard "active" state */
 .custom-hover-button:active {
   transform: translateY(2px) !important; /* Slight button press effect */
