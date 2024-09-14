@@ -38,7 +38,7 @@
   height: 100%;
   background-color: yellow;
   z-index: -1; /* Ensures background stays behind the text */
-  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smooth background slide with ease */
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth background slide with ease */
 }
 
 .custom-hover-button:hover::before {
@@ -49,7 +49,7 @@
 .custom-hover-button .arrow {
   position: relative;
   z-index: 1; /* Text and arrow stay above the background */
-  transition: color 0.3s ease !important;
+  transition: color 0.3s ease;
 }
 
 .custom-hover-button .arrow svg path {
