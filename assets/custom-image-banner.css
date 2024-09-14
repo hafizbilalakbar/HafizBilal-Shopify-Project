@@ -22,7 +22,7 @@
 /* Add a subtle shadow on hover */
 .custom-hover-button:hover {
   color: black; 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0px 2px 4px 0px #0000004d !important;
 }
 
 .custom-hover-button::before {
