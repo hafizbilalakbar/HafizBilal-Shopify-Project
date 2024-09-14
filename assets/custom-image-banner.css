@@ -424,7 +424,7 @@
   .custom-banner-desktop-transparent .custom-banner__box {
     padding: 4rem 0;
     background: transparent;
-    max-width: 89rem;
+    /* max-width: 89rem; */
     border: none;
     border-radius: 0;
     box-shadow: none;

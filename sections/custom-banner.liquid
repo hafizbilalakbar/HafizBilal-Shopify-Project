@@ -1,21 +1,19 @@
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
-
-  <style>
+  {%- style -%}
     
-  /* Desktop view */
+/* Desktop view */
 @media screen and (min-width: 750px) {
-.custom-banner-desktop-transparent .custom-banner__box {
-  max-width: {{ section.settings.banner_desktop_max_width }}rem !important;
+  .custom-banner-desktop-transparent .custom-banner__box {
+  max-width: {{ section.settings.banner_desktop_max_width }}rem;
 }
-
 }
 
 /* Tablet view */
 @media screen and (max-width: 749px) and (min-width: 600px) {
 .custom-banner-tablet-transparent .custom-banner__box {
-  max-width: {{ section.settings.banner_tablet_max_width }}rem !important;
+  max-width: {{ section.settings.banner_tablet_max_width }}rem;
 }
 }
 
@@ -25,7 +23,7 @@
 }
 
     
-</style>
+  {%- endstyle -%}
 {%- endif -%}
 
 {%- style -%}
