@@ -1,65 +1,71 @@
+/* Custom hover button styling */
 .custom-hover-button {
-  display: inline-block;
-  padding: 10px 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   background-color: black;
   color: white;
-  border-radius: 30px;
-  text-decoration: none;
+  padding: 12px 24px;
+  border: none;
+  text-transform: uppercase;
   font-size: 16px;
-  font-weight: 500;
-  position: relative;
+  font-weight: 400;
+  line-height: 20.48px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  transition: color 0.3s ease;
+  outline: none;
+  border-radius: 4px;
 }
 
-.custom-hover-button .arrow {
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  transition: fill 0.3s ease;
-}
-
-.custom-hover-button::before {
-  content: "";
+/* Yellow background span */
+.custom-hover-button .button-bg {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background-color: #FFF544;
+  z-index: -1;
   transition: left 0.4s ease;
-  border-radius: inherit; /* Ensures the hover effect follows the rounded corners */
+  border-radius: 4px;
 }
 
-.custom-hover-button:hover::before {
+/* Move the background into view on hover */
+.custom-hover-button:hover .button-bg {
   left: 0;
 }
 
-.custom-hover-button:hover {
-  color: black;
+/* Button text and arrow styling */
+.custom-hover-button .button-text,
+.custom-hover-button .arrow {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-.custom-hover-button:hover .arrow-path {
+/* Arrow color transition */
+.custom-hover-button .arrow svg path {
+  transition: fill 0.3s ease;
+}
+
+.custom-hover-button:hover .arrow svg path {
   fill: black;
 }
 
-.custom-hover-button span {
-  position: relative;
-  z-index: 1;
+/* Button active state */
+.custom-hover-button:active {
+  transform: translateY(2px);
 }
 
-.custom-hover-button:hover span {
-  animation: moveText 0.4s forwards;
+/* Shadow on hover */
+.custom-hover-button:hover {
+  color: black;
+  box-shadow: none;
 }
 
-@keyframes moveText {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(5px); /* Slight shift for a dynamic effect */
-  }
-}
 
 
 .custom-banner {
