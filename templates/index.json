@@ -52,7 +52,7 @@
         "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
-        "banner_desktop_max_width": 48,
+        "banner_desktop_max_width": 30,
         "banner_tablet_max_width": 50,
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
