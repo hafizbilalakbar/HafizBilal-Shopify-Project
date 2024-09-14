@@ -2,6 +2,59 @@
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
+
+    /* Custom hover button styling */
+.custom-hover-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.custom-hover-button .arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Hover, focus, and active states */
+.custom-hover-button:hover,
+.custom-hover-button:focus,
+.custom-hover-button:active {
+  background-color: yellow;
+  color: black;
+}
+
+.custom-hover-button:hover .arrow,
+.custom-hover-button:focus .arrow,
+.custom-hover-button:active .arrow {
+  margin-left: 15px; /* Smooth shift of the arrow on hover */
+}
+
+/* Secondary button style (if outline is enabled) */
+.button--secondary {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button--secondary:hover,
+.button--secondary:focus,
+.button--secondary:active {
+  background-color: black;
+  color: white;
+}
+
+    
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }}::before,
       #Banner-{{ section.id }} .custom-banner__media::before,
