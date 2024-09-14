@@ -14,10 +14,10 @@
   font-weight: 400;
   line-height: 20.48px;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensure the background doesn't overflow */
   outline: none;
-  border-radius: 4px;
+  border-radius: 4px; /* Rounded corners to match design */
 }
 
 /* Yellow background span */
@@ -28,9 +28,9 @@
   width: 100%;
   height: 100%;
   background-color: #FFF544;
-  z-index: -1;
+  z-index: -1; /* Stay behind the text and arrow */
   transition: left 0.4s ease;
-  border-radius: 4px;
+  border-radius: 4px; /* Ensure the background follows the button's rounded corners */
 }
 
 /* Move the background into view on hover */
@@ -42,7 +42,7 @@
 .custom-hover-button .button-text,
 .custom-hover-button .arrow {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Keep text above the background */
   transition: color 0.3s ease;
 }
 
@@ -64,6 +64,11 @@
 .custom-hover-button:hover {
   color: black;
   box-shadow: none;
+}
+
+/* Ensure no border or outline is shown */
+.custom-hover-button:focus {
+  outline: none;
 }
 
 
