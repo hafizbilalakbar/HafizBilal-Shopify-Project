@@ -1,7 +1,8 @@
-/* Common Button Styling */
-.button {
+.custom-hover-button {
   display: inline-block;
   padding: 10px 25px;
+  background-color: black;
+  color: white;
   border-radius: 30px;
   text-decoration: none;
   font-size: 16px;
@@ -9,25 +10,16 @@
   position: relative;
   overflow: hidden;
   transition: color 0.3s ease;
-  text-align: center;
-  white-space: nowrap;
-  box-sizing: border-box;
 }
 
-/* Primary Button: Black background with hover effect */
-.button--primary {
-  background-color: black;
-  color: white;
-}
-
-.button--primary .arrow {
+.custom-hover-button .arrow {
   margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
   transition: fill 0.3s ease;
 }
 
-.button--primary::before {
+.custom-hover-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -36,57 +28,21 @@
   height: 100%;
   background-color: #FFF544;
   transition: left 0.4s ease;
-  border-radius: inherit;
+  border-radius: inherit; /* Ensures the hover effect follows the rounded corners */
 }
 
-.button--primary:hover::before {
+.custom-hover-button:hover::before {
   left: 0;
 }
 
-.button--primary:hover {
+.custom-hover-button:hover {
   color: black;
 }
 
-.button--primary:hover .arrow-path {
+.custom-hover-button:hover .arrow-path {
   fill: black;
 }
 
-/* Secondary Button: Outline style */
-.button--secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.button--secondary .arrow {
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  transition: fill 0.3s ease;
-}
-
-.button--secondary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: left 0.4s ease;
-  border-radius: inherit;
-}
-
-.button--secondary:hover {
-  color: #FFF544;
-  border-color: #FFF544;
-}
-
-.button--secondary:hover .arrow-path {
-  fill: #FFF544;
-}
-
-/* For both buttons */
 .custom-hover-button span {
   position: relative;
   z-index: 1;
@@ -101,22 +57,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(5px);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .button {
-    padding: 8px 18px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .button {
-    padding: 6px 14px;
-    font-size: 12px;
+    transform: translateX(5px); /* Slight shift for a dynamic effect */
   }
 }
 
