@@ -18,7 +18,7 @@
   position: relative;
   overflow: hidden; /* Ensure the animation stays within the button */
   transition: color 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0px 0px 3px rgba(0, 0, 0, 0.15); /* Subtle shadow on bottom and sides */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on bottom and sides */
 }
 
 /* Before pseudo-element for smooth background animation */
@@ -54,11 +54,16 @@
   color: black; /* Change text color to black on hover */
 }
 
+.custom-hover-button:hover .arrow path,
+.custom-hover-button:focus .arrow path,
+.custom-hover-button:active .arrow path {
+  fill: black; /* Change arrow color to black on hover */
+}
+
 .custom-hover-button:hover .arrow,
 .custom-hover-button:focus .arrow,
 .custom-hover-button:active .arrow {
   margin-left: 15px; /* Slight movement of the arrow */
-  fill: black; /* Smoothly change arrow color to black */
 }
 
 /* Responsive design: center-align on smaller screens */
@@ -68,6 +73,7 @@
     justify-content: center; /* Ensure content is centered */
   }
 }
+
 
 
 
