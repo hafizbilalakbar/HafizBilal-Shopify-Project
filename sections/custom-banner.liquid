@@ -15,9 +15,11 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
   overflow: hidden; /* Keeps the hover effect inside the button */
   outline: none; /* Removes default outline */
+  white-space: nowrap; /* Prevents text from wrapping */
+  min-width: 200px; /* Ensures button doesn't get too small on small screens */
 }
 
 /* Add a subtle shadow on hover */
@@ -26,6 +28,7 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
+/* Smooth background color slide */
 .custom-hover-button::before {
   content: "";
   position: absolute;
@@ -35,7 +38,7 @@
   height: 100%;
   background-color: yellow;
   z-index: -1; /* Ensures background stays behind the text */
-  transition: left 0.4s ease; /* Smooth background slide from left to right */
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smooth background slide with ease */
 }
 
 .custom-hover-button:hover::before {
@@ -46,11 +49,11 @@
 .custom-hover-button .arrow {
   position: relative;
   z-index: 1; /* Text and arrow stay above the background */
-  transition: color 0.3s ease;
+  transition: color 0.3s ease !important;
 }
 
 .custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease; /* Smooth transition for arrow color */
+  transition: fill 0.3s ease !important; /* Smooth transition for arrow color */
 }
 
 .custom-hover-button:hover .arrow svg path {
@@ -66,6 +69,24 @@
 .custom-hover-button:active {
   transform: translateY(2px); /* Slight button press effect */
 }
+
+/* Responsive design for different screen sizes */
+@media (max-width: 768px) {
+  .custom-hover-button {
+    font-size: 14px; /* Smaller font size on smaller screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    min-width: 160px; /* Adjust button width for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-hover-button {
+    font-size: 12px; /* Even smaller font size for mobile */
+    padding: 8px 16px; /* Adjust padding for mobile screens */
+    min-width: 140px; /* Adjust button width for small screens */
+  }
+}
+
 
 
 
