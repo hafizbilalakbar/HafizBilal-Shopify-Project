@@ -1,74 +1,123 @@
-/* Custom hover button styling */
-.custom-hover-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  background-color: black;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  text-transform: uppercase;
+/* Common Button Styling */
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20.48px;
-  cursor: pointer;
-  transition: color 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Ensure the background doesn't overflow */
-  outline: none;
-  border-radius: 4px; /* Rounded corners to match design */
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
-/* Yellow background span */
-.custom-hover-button .button-bg {
+/* Primary Button: Black background with hover effect */
+.button--primary {
+  background-color: black;
+  color: white;
+}
+
+.button--primary .arrow {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: fill 0.3s ease;
+}
+
+.button--primary::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background-color: #FFF544;
-  z-index: -1; /* Stay behind the text and arrow */
   transition: left 0.4s ease;
-  border-radius: 4px; /* Ensure the background follows the button's rounded corners */
+  border-radius: inherit;
 }
 
-/* Move the background into view on hover */
-.custom-hover-button:hover .button-bg {
+.button--primary:hover::before {
   left: 0;
 }
 
-/* Button text and arrow styling */
-.custom-hover-button .button-text,
-.custom-hover-button .arrow {
-  position: relative;
-  z-index: 1; /* Keep text above the background */
-  transition: color 0.3s ease;
+.button--primary:hover {
+  color: black;
 }
 
-/* Arrow color transition */
-.custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease;
-}
-
-.custom-hover-button:hover .arrow svg path {
+.button--primary:hover .arrow-path {
   fill: black;
 }
 
-/* Button active state */
-.custom-hover-button:active {
-  transform: translateY(2px);
+/* Secondary Button: Outline style */
+.button--secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
-/* Shadow on hover */
-.custom-hover-button:hover {
-  color: black;
-  box-shadow: none;
+.button--secondary .arrow {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: fill 0.3s ease;
 }
 
-/* Ensure no border or outline is shown */
-.custom-hover-button:focus {
-  outline: none;
+.button--secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: left 0.4s ease;
+  border-radius: inherit;
+}
+
+.button--secondary:hover {
+  color: #FFF544;
+  border-color: #FFF544;
+}
+
+.button--secondary:hover .arrow-path {
+  fill: #FFF544;
+}
+
+/* For both buttons */
+.custom-hover-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-hover-button:hover span {
+  animation: moveText 0.4s forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
 }
 
 
