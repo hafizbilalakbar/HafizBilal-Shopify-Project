@@ -1,4 +1,3 @@
-
 /* Custom hover button styling */
 .custom-hover-button {
   position: relative;
@@ -9,58 +8,61 @@
   background-color: black;
   color: white;
   padding: 12px 24px;
-  border: none; 
+  border: none;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20.48px
+  line-height: 20.48px;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; 
-  outline: none; 
+  overflow: hidden;
+  outline: none;
 }
 
-/* Add a subtle shadow on hover */
-.custom-hover-button:hover {
-  color: black; 
-  box-shadow: 0px 2px 4px 0px #0000004d !important;
-}
-
-.custom-hover-button::before {
-  content: "";
+/* Yellow background span */
+.custom-hover-button .button-bg {
   position: absolute;
   top: 0;
-  left: -100%; 
+  left: -100%;
   width: 100%;
   height: 100%;
   background-color: #FFF544;
-  z-index: -1; 
-  transition: left 0.4s ease; 
+  z-index: -1; /* Stay behind the text and arrow */
+  transition: left 0.4s ease;
 }
 
-.custom-hover-button:hover::before {
-  left: 0; 
+.custom-hover-button:hover .button-bg {
+  left: 0;
 }
 
-.custom-hover-button span,
+/* Button text and arrow styling */
+.custom-hover-button .button-text,
 .custom-hover-button .arrow {
   position: relative;
-  z-index: 1; 
+  z-index: 1; /* Keep text above the background */
   transition: color 0.3s ease;
 }
 
+/* Arrow color transition */
 .custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease; 
+  transition: fill 0.3s ease;
 }
 
 .custom-hover-button:hover .arrow svg path {
-  fill: black; 
+  fill: black;
 }
 
-
+/* Button active state */
 .custom-hover-button:active {
-  transform: translateY(2px) !important; 
+  transform: translateY(2px) !important;
 }
+
+/* Shadow on hover */
+.custom-hover-button:hover {
+  color: black;
+  box-shadow: 0px 2px 4px 0px #0000004d !important;
+}
+
 
 
 
