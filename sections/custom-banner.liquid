@@ -1,6 +1,7 @@
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+  {%- endif -%}
 {%- style -%}
   /* Desktop view */
   @media screen and (min-width: 750px) {
@@ -21,8 +22,6 @@
     max-width: 100%; /* Full width for mobile */
   }
 {%- endstyle -%}
-
-{%- endif -%}
 
 {%- style -%}
   #Banner-{{ section.id }}::after {
