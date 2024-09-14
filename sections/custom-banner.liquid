@@ -3,7 +3,7 @@
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
 
-    /* Custom hover button styling */
+  /* Custom hover button styling */
 .custom-hover-button {
   display: inline-flex;
   align-items: center;
@@ -11,14 +11,16 @@
   background-color: black;
   color: white;
   padding: 10px 20px;
-  border: none;
+  border: 2px solid black;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
   position: relative;
   overflow: hidden; /* Ensure the animation stays within the button */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
+/* Before pseudo-element for smooth background animation */
 .custom-hover-button::before {
   content: "";
   position: absolute;
@@ -27,28 +29,37 @@
   width: 100%;
   height: 100%;
   background-color: yellow;
-  transition: left 0.5s ease; /* Smooth transition */
-  z-index: 0; /* Place the background behind the text */
+  transition: left 0.5s ease; /* Smooth background animation */
+  z-index: 0; /* Keep the background behind the text */
+  border: 2px solid yellow; /* Matching the button border */
 }
 
 .custom-hover-button:hover::before,
 .custom-hover-button:focus::before,
 .custom-hover-button:active::before {
-  left: 0; /* Move the background from left to right */
+  left: 0; /* Slide background from left to right */
 }
 
+/* Text and arrow styling */
 .custom-hover-button span,
 .custom-hover-button .arrow {
   position: relative;
   z-index: 1; /* Ensure text and arrow are above the background */
-  transition: margin-left 0.3s ease;
+  transition: margin-left 0.3s ease, color 0.3s ease;
+}
+
+.custom-hover-button:hover,
+.custom-hover-button:focus,
+.custom-hover-button:active {
+  color: black; /* Change text to black on hover */
 }
 
 .custom-hover-button:hover .arrow,
 .custom-hover-button:focus .arrow,
 .custom-hover-button:active .arrow {
-  margin-left: 15px; /* Smooth shift of the arrow on hover */
+  margin-left: 15px; /* Slight movement of the arrow */
 }
+
 
     
     @media screen and (max-width: 749px) {
