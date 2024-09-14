@@ -46,7 +46,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Group_1000008197.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "medium",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
