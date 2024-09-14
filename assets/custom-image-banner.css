@@ -24,7 +24,7 @@
 .custom-hover-button:hover {
   color: black; 
   box-shadow: 0px 2px 4px 0px #0000004d !important;
-  background-color: #FFF544 !lime;
+  background-color: #FFF544 !important;
 }
 
 .custom-hover-button::before {
