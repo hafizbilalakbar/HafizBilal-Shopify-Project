@@ -1,26 +1,23 @@
  {{ 'custom-popup.css' | asset_url | stylesheet_tag }}
 
 
-<div id="product-popup" class="popup-overlay">
-  <div class="popup-content">
-    <span class="popup-close">&times;</span>
-    <div class="popup-image">
-      <img id="popup-product-image" src="" alt="Product Image">
+<div id="product-popup" class="popup hidden">
+    <div class="popup-content">
+        <span id="close-popup">&times;</span>
+        <img id="popup-product-image" src="" alt="Product Image">
+        <h2 id="popup-product-title"></h2>
+        <p id="popup-product-price"></p>
+        <p id="popup-product-description"></p>
+        
+        <label for="popup-product-variants">Variants:</label>
+        <select id="popup-product-variants">
+            <!-- Variants will be dynamically loaded -->
+        </select>
+        
+        <button id="add-to-cart-button">Add to Cart</button>
     </div>
-    <div class="popup-details">
-      <h3 id="popup-product-title">Product Title</h3>
-      <p id="popup-product-price">$0.00</p>
-      <p id="popup-product-description">Product description goes here...</p>
-
-      <!-- Variant selection -->
-      <label for="popup-variant-select">Choose a variant:</label>
-      <select id="popup-variant-select"></select>
-
-      <!-- Add to Cart button -->
-      <button id="popup-add-to-cart" class="button button--primary">Add to Cart</button>
-    </div>
-  </div>
 </div>
+
 
 
 
