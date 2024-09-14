@@ -45,6 +45,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Group_1000008197.png",
+        "image_2": "shopify:\/\/shop_images\/Frame.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
@@ -56,7 +57,7 @@
         "banner_tablet_max_width": 50,
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "featured_collection": {
