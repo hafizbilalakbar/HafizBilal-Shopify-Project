@@ -44,21 +44,21 @@
 .custom-hover-button span,
 .custom-hover-button .arrow {
   position: relative;
-  z-index: 1; /* Text and arrow stay above the background */
+  /* z-index: 1;  */
   transition: color 0.3s ease;
 }
 
 .custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease; /* Smooth transition for arrow color */
+  transition: fill 0.3s ease; 
 }
 
 .custom-hover-button:hover .arrow svg path {
-  fill: black; /* Arrow color changes to black on hover */
+  fill: black; 
 }
 
-/* Adds keyboard "active" state */
+
 .custom-hover-button:active {
-  transform: translateY(2px) !important; /* Slight button press effect */
+  transform: translateY(2px) !important; 
 }
 
 
