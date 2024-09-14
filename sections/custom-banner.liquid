@@ -5,61 +5,59 @@
 
 /* Custom hover button styling */
 .custom-hover-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  display: inline-block;
   background-color: black;
   color: white;
-  padding: 10px 20px;
-  border: 1px solid black;
+  padding: 12px 24px;
+  border: 2px solid black;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
-  overflow: hidden;
-  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-  z-index: 1; /* Keep the text above the background */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Ensures the background transition stays within the button bounds */
 }
 
 .custom-hover-button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -100%; /* Starts the background from the left off-screen */
   width: 100%;
   height: 100%;
   background-color: yellow;
-  z-index: 0; /* Background stays behind the text */
-  transition: left 0.5s ease;
+  z-index: 0; /* Ensures background stays behind the text */
+  transition: left 0.4s ease; /* Smooth background slide from left to right */
 }
 
 .custom-hover-button:hover::before {
-  left: 0; /* Smoothly slide from left to right */
+  left: 0; /* On hover, the yellow background slides in from left to right */
 }
 
 .custom-hover-button span,
 .custom-hover-button .arrow {
   position: relative;
-  z-index: 1; /* Keep text and arrow above the background */
-  transition: margin-left 0.3s ease, color 0.3s ease;
+  z-index: 1; /* Text and arrow stay above the background */
+  transition: color 0.3s ease;
 }
 
 .custom-hover-button:hover {
-  color: black; /* Change text color to black on hover */
+  color: black; /* Text color turns black on hover */
 }
 
-.custom-hover-button:hover .arrow {
-  margin-left: 8px; /* Slight movement of the arrow */
-  fill: black; /* Change arrow color to black */
-}
-
-/* SVG Arrow */
 .custom-hover-button .arrow svg path {
-  transition: fill 0.3s ease; /* Smooth color transition for the arrow */
+  transition: fill 0.3s ease; /* Smooth transition for the arrow color */
 }
 
 .custom-hover-button:hover .arrow svg path {
-  fill: black; /* Change arrow color to black on hover */
+  fill: black; /* Arrow color changes to black on hover */
+}
+
+/* Prevent the button from stretching */
+.custom-hover-button:hover {
+  padding: 12px 24px; /* Ensures the padding and size don't change on hover */
+  width: auto; /* Keeps the width constant */
 }
 
 
