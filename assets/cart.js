@@ -281,6 +281,26 @@ if (!customElements.get('cart-note')) {
           }, ON_CHANGE_DEBOUNCE_TIMER)
         );
       }
+
+      // Function to add an item to the cart
+      addItemToCart(item) {
+        let cartItems = this.getCartItems(); // Get current cart items
+        cartItems.push(item); // Add new item to the array
+        this.updateCartItems(cartItems); // Update the cart with the new array
+      }
+
+      // Function to get current cart items (you may implement as needed)
+      getCartItems() {
+        // This can be an API call or local storage retrieval
+        return JSON.parse(localStorage.getItem('cartItems')) || [];
+      }
+
+      // Function to update the cart items
+      updateCartItems(items) {
+        localStorage.setItem('cartItems', JSON.stringify(items));
+        // Optionally, you could trigger a UI update here
+      }
     }
   );
 }
+
